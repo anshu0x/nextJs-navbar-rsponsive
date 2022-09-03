@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
+import { BiMenuAltLeft } from "react-icons/bi";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
@@ -25,9 +26,7 @@ const Navbar = () => {
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar`}
         >
-          <div></div>
-          <div></div>
-          <div></div>
+          <BiMenuAltLeft />
         </div>
         <div className={`${navActive ? "active" : ""} nav__menu-list`}>
           {MENU_LIST.map((menu, idx) => (
